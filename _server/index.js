@@ -2,6 +2,7 @@ require('dotenv').config()
 const next = require('next')
 const express = require('express')
 const bodyParser = require('body-parser')
+const path = require('path')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dir: './_client', dev })
@@ -23,6 +24,7 @@ app.prepare()
     server.use(bodyParser.urlencoded({ extended: true }))
     server.use('/api', routers.api)
     server.use('/auth', routers.auth)
+    server.use('/', express.static(path.resolve(__dirname, '../_client/static')))
 
     server.get('/*', (req, res) => {
       return handle(req, res)
