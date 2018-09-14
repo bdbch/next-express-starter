@@ -1,0 +1,22 @@
+{
+  "name": "next-express-starter",
+  "version": "0.0.1",
+  "main": "_server/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon _server/index.js",
+    "build": "next build _client",
+    "start": "NODE_ENV=production node _server/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "next": "^6.1.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
