@@ -13,7 +13,6 @@ class StyledDocument extends Document {
     return (
       <html>
         <Head>
-          {this.props.head}
           {this.props.styleTags}
         </Head>
         <body>
